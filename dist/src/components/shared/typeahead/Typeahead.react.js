@@ -7,15 +7,21 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _core = require("@material-ui/core");
-
 var _react = _interopRequireWildcard(require("react"));
 
-var _searchInput = _interopRequireDefault(require("../search-input"));
+var _TextField = _interopRequireDefault(require("@material-ui/core/TextField"));
 
-var _submitButton = _interopRequireDefault(require("../submit-button"));
+var _InputAdornment = _interopRequireDefault(require("@material-ui/core/InputAdornment"));
 
-require("./search-component.css");
+var _CircularProgress = _interopRequireDefault(require("@material-ui/core/CircularProgress"));
+
+var _IconButton = _interopRequireDefault(require("@material-ui/core/IconButton"));
+
+var _Search = _interopRequireDefault(require("@material-ui/icons/Search"));
+
+var _Clear = _interopRequireDefault(require("@material-ui/icons/Clear"));
+
+require("./typeahead.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35,60 +41,84 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var SearchComponent = function SearchComponent(props) {
-  var onFinish = props.onFinish,
-      data = props.data;
+var Typeahead = function Typeahead(props) {
+  var data = props.data,
+      label = props.label,
+      _props$debounceTime = props.debounceTime,
+      debounceTime = _props$debounceTime === void 0 ? 400 : _props$debounceTime,
+      onFinish = props.onFinish;
 
   var _useState = (0, _react.useState)(''),
       _useState2 = _slicedToArray(_useState, 2),
-      text = _useState2[0],
-      setText = _useState2[1];
+      value = _useState2[0],
+      setValue = _useState2[1];
 
   var _useState3 = (0, _react.useState)(false),
       _useState4 = _slicedToArray(_useState3, 2),
       isLoading = _useState4[0],
       setIsLoading = _useState4[1];
 
-  var onSearch = function onSearch() {
-    setIsLoading(true); // Mock api call
+  var timer = (0, _react.useRef)(null);
+  var latestSearchId = (0, _react.useRef)(null);
 
+  var search = function search(filter, searchId) {
+    // Mock search
     setTimeout(function () {
-      var filteredData = data.filter(function (person) {
-        return person.name.toLowerCase().includes(text) || person.surname.toLowerCase().includes(text);
-      });
-      onFinish(filteredData);
-      setIsLoading(false);
-    }, 750);
+      if (searchId === latestSearchId.current) {
+        setIsLoading(false);
+        var filteredData = data.filter(function (person) {
+          return person.name.toLowerCase().includes(filter.toLowerCase()) || person.surname.toLowerCase().includes(filter.toLowerCase()) || person.age === parseInt(filter);
+        });
+        onFinish(filteredData);
+      }
+    }, 500);
   };
 
-  return /*#__PURE__*/_react.default.createElement("form", {
-    className: "searchForm"
-  }, /*#__PURE__*/_react.default.createElement(_core.Grid, {
-    container: true,
-    spacing: 3
-  }, /*#__PURE__*/_react.default.createElement(_core.Grid, {
-    item: true,
-    xs: 4
-  }, /*#__PURE__*/_react.default.createElement(_searchInput.default, {
-    placeholder: 'Type name or surname to filter',
-    label: "Search",
-    disabled: isLoading,
-    value: text,
-    onChange: setText
-  })), /*#__PURE__*/_react.default.createElement(_core.Grid, {
-    item: true,
-    xs: 4,
-    style: {
-      alignSelf: 'flex-end'
+  var hanldeDebounce = function hanldeDebounce(value) {
+    if (timer) {
+      clearTimeout(timer.current);
     }
-  }, /*#__PURE__*/_react.default.createElement(_submitButton.default, {
-    onClick: onSearch,
-    text: "SEARCH NOW!",
-    disabled: isLoading
-  }))));
+
+    ;
+    setIsLoading(true);
+    var searchId = Math.random();
+    timer.current = setTimeout(function () {
+      return search(value, searchId);
+    }, debounceTime);
+    latestSearchId.current = searchId;
+  };
+
+  var onTextChange = function onTextChange(e) {
+    var value = e.target.value;
+    setValue(value);
+    hanldeDebounce(value);
+  };
+
+  var onClear = function onClear() {
+    setValue('');
+    hanldeDebounce('');
+  };
+
+  return /*#__PURE__*/_react.default.createElement(_TextField.default, {
+    value: value,
+    onChange: onTextChange,
+    label: label,
+    fullWidth: true,
+    InputProps: {
+      startAdornment: /*#__PURE__*/_react.default.createElement(_InputAdornment.default, {
+        position: "start"
+      }, isLoading ? /*#__PURE__*/_react.default.createElement(_CircularProgress.default, {
+        size: 18
+      }) : /*#__PURE__*/_react.default.createElement(_Search.default, null)),
+      endAdornment: value && /*#__PURE__*/_react.default.createElement(_IconButton.default, {
+        size: 'small',
+        onClick: onClear
+      }, /*#__PURE__*/_react.default.createElement(_Clear.default, null))
+    }
+  });
 };
 
-var _default = SearchComponent;
+var _default = Typeahead;
 exports.default = _default;
 
-//# sourceMappingURL=SearchComponent.react.js.map
+//# sourceMappingURL=Typeahead.react.js.map

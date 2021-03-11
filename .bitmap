@@ -24,7 +24,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "burakgavas.react-tutorial/search-component@0.0.13": {
+    "burakgavas.react-tutorial/search-component@0.0.14": {
         "files": [
             {
                 "relativePath": "src/components/shared/search-component/SearchComponent.react.js",
@@ -90,6 +90,29 @@
         ],
         "mainFile": "src/components/shared/submit-button/index.js",
         "trackDir": "src/components/shared/submit-button",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "burakgavas.react-tutorial/typeahead@0.0.14": {
+        "files": [
+            {
+                "relativePath": "src/components/shared/typeahead/Typeahead.react.js",
+                "test": false,
+                "name": "Typeahead.react.js"
+            },
+            {
+                "relativePath": "src/components/shared/typeahead/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/shared/typeahead/typeahead.css",
+                "test": false,
+                "name": "typeahead.css"
+            }
+        ],
+        "mainFile": "src/components/shared/typeahead/index.js",
+        "trackDir": "src/components/shared/typeahead",
         "origin": "AUTHORED",
         "exported": true
     },
