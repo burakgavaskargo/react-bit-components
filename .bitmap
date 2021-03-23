@@ -24,6 +24,29 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "burakgavas.react-tutorial/krg-button@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/shared/krg-button/index.ts",
+                "test": false,
+                "name": "index.ts"
+            },
+            {
+                "relativePath": "src/components/shared/krg-button/krg-button.react.tsx",
+                "test": false,
+                "name": "krg-button.react.tsx"
+            },
+            {
+                "relativePath": "src/components/shared/krg-button/krg-button.style.tsx",
+                "test": false,
+                "name": "krg-button.style.tsx"
+            }
+        ],
+        "mainFile": "src/components/shared/krg-button/index.ts",
+        "trackDir": "src/components/shared/krg-button",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "burakgavas.react-tutorial/person-card@0.0.10": {
         "files": [
             {
