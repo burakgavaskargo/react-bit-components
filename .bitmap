@@ -162,5 +162,28 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "krg-typeahead": {
+        "files": [
+            {
+                "relativePath": "src/components/shared/krg-typeahead/index.ts",
+                "test": false,
+                "name": "index.ts"
+            },
+            {
+                "relativePath": "src/components/shared/krg-typeahead/krg-typeahead.react.tsx",
+                "test": false,
+                "name": "krg-typeahead.react.tsx"
+            },
+            {
+                "relativePath": "src/components/shared/krg-typeahead/krg-typeahead.style.tsx",
+                "test": false,
+                "name": "krg-typeahead.style.tsx"
+            }
+        ],
+        "mainFile": "src/components/shared/krg-typeahead/index.ts",
+        "trackDir": "src/components/shared/krg-typeahead",
+        "origin": "AUTHORED",
+        "exported": false
+    },
     "version": "14.8.8"
 }

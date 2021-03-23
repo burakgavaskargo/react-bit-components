@@ -1,5 +1,5 @@
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import { COLORS } from '../../../util/constants';
+import { COLORS } from '../util/constants';
 
 type Props = {
   iconExists: boolean,
