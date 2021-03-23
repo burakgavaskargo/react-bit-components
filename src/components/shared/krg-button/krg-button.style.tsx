@@ -1,8 +1,5 @@
 import makeStyles from '@material-ui/core/styles/makeStyles';
-
-const primaryColor = '#303237';
-const secondaryColor = '#00B5E2';
-const secondaryColorLight = '#E6F8FC';
+import { COLORS } from '../../../util/constants';
 
 type Props = {
   iconExists: boolean,
@@ -122,9 +119,9 @@ const useStyles = ({
   */
   textButton: {
     backgroundColor: 'white',
-    color: secondaryColor,
+    color: COLORS.SECONDARY_COLOR,
     '&:hover': {
-      backgroundColor: secondaryColorLight,
+      backgroundColor: COLORS.SECONDARY_COLOR_LIGHT,
     },
     '&:disabled': {
       color: '#91A0AD',
@@ -140,16 +137,16 @@ const useStyles = ({
   */
   outlinedButton: {
     backgroundColor: 'white',
-    borderColor: primaryColor,
-    color: primaryColor,
+    borderColor: COLORS.PRIMARY_COLOR,
+    color: COLORS.PRIMARY_COLOR,
     '&:hover': {
       backgroundColor: 'white',
-      borderColor: secondaryColor,
-      color: secondaryColor,
+      borderColor: COLORS.SECONDARY_COLOR,
+      color: COLORS.SECONDARY_COLOR,
     },
     '&:disabled': {
-      borderColor: '#A7B3BD',
-      color: '#A7B3BD',
+      borderColor: COLORS.PRIMARY_COLOR_LIGHT,
+      color: COLORS.PRIMARY_COLOR_LIGHT,
     },
   },
   // Ripple effect
@@ -161,10 +158,10 @@ const useStyles = ({
     Contained button style
   */
   containedButton: {
-    backgroundColor: primaryColor,
+    backgroundColor: COLORS.PRIMARY_COLOR,
     color: 'white',
     '&:hover': {
-      backgroundColor: secondaryColor,
+      backgroundColor: COLORS.PRIMARY_COLOR,
     },
     '&:disabled': {
       backgroundColor: '#D1D9DE',

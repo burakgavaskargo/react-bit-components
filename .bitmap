@@ -24,7 +24,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "burakgavas.react-tutorial/krg-button@0.0.1": {
+    "burakgavas.react-tutorial/krg-button@0.0.5": {
         "files": [
             {
                 "relativePath": "src/components/shared/krg-button/index.ts",

@@ -1,2 +1,2 @@
-import CustomTable from './CustomTable.react';
-export default CustomTable;
+import KrgButton from './krg-button.react';
+export default KrgButton;
