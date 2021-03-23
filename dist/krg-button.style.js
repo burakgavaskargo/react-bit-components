@@ -1,7 +1,4 @@
 import makeStyles from '@material-ui/core/styles/makeStyles';
-const primaryColor = '#303237';
-const secondaryColor = '#00B5E2';
-const secondaryColorLight = '#E6F8FC';
 const useStyles = ({ iconFontSize, iconExists, fullWidth, }) => makeStyles({
     innerContainer: {
         alignItems: 'center',
@@ -84,9 +81,9 @@ const useStyles = ({ iconFontSize, iconExists, fullWidth, }) => makeStyles({
     },
     textButton: {
         backgroundColor: 'white',
-        color: secondaryColor,
+        color: '#00B5E2',
         '&:hover': {
-            backgroundColor: secondaryColorLight,
+            backgroundColor: '#E6F8FC',
         },
         '&:disabled': {
             color: '#91A0AD',
@@ -97,12 +94,12 @@ const useStyles = ({ iconFontSize, iconExists, fullWidth, }) => makeStyles({
     },
     outlinedButton: {
         backgroundColor: 'white',
-        borderColor: primaryColor,
-        color: primaryColor,
+        borderColor: '#303237',
+        color: '#303237',
         '&:hover': {
             backgroundColor: 'white',
-            borderColor: secondaryColor,
-            color: secondaryColor,
+            borderColor: '#00B5E2',
+            color: '#00B5E2',
         },
         '&:disabled': {
             borderColor: '#A7B3BD',
@@ -113,10 +110,10 @@ const useStyles = ({ iconFontSize, iconExists, fullWidth, }) => makeStyles({
         opacity: 0.5,
     },
     containedButton: {
-        backgroundColor: primaryColor,
+        backgroundColor: '#303237',
         color: 'white',
         '&:hover': {
-            backgroundColor: secondaryColor,
+            backgroundColor: '#00B5E2',
         },
         '&:disabled': {
             backgroundColor: '#D1D9DE',

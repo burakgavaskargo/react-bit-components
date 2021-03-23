@@ -29,7 +29,7 @@ const KrgTypeahead = ({
 }: Props) => {
   const classes = useStyles()();
   const [text, setText] = useState<string>('');
-  const timer = useRef<NodeJS.Timeout | null>(null);
+  const timer = useRef<any>(null);
   const hasError = errorMessage !== '';
 
   const onTextChange = (e: ChangeEvent<HTMLInputElement>) => {

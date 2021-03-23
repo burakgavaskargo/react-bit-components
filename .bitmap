@@ -24,7 +24,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "burakgavas.react-tutorial/krg-button@0.0.5": {
+    "burakgavas.react-tutorial/krg-button@0.0.6": {
         "files": [
             {
                 "relativePath": "src/components/shared/krg-button/index.ts",
@@ -182,19 +182,6 @@
         ],
         "mainFile": "src/components/shared/krg-typeahead/index.ts",
         "trackDir": "src/components/shared/krg-typeahead",
-        "origin": "AUTHORED",
-        "exported": false
-    },
-    "util": {
-        "files": [
-            {
-                "relativePath": "src/components/shared/util/constants.tsx",
-                "test": false,
-                "name": "constants.tsx"
-            }
-        ],
-        "mainFile": "src/components/shared/util/constants.tsx",
-        "trackDir": "src/components/shared/util",
         "origin": "AUTHORED",
         "exported": false
     },
