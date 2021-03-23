@@ -1,12 +1,11 @@
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import { COLORS } from '../util/constants';
 
 const useStyles = () => makeStyles({
   /*
     Input text class
   */
   text: {
-    color: COLORS.PRIMARY_COLOR,
+    color: '#303237',
   },
 
   /*
@@ -17,19 +16,19 @@ const useStyles = () => makeStyles({
       borderBottomColor: '#656C75', // Semi-transparent underline
     },
     '& .MuiInput-underline:hover:before': {
-      borderBottomColor: COLORS.SECONDARY_COLOR, // Solid underline on hover
+      borderBottomColor: '#00B5E2', // Solid underline on hover
       opacity: 0.4,
     },
     '& .MuiInput-underline:after': {
-      borderBottomColor: COLORS.SECONDARY_COLOR, // Solid underline on focus
+      borderBottomColor: '#00B5E2', // Solid underline on focus
     },
   },
   textFieldError: {
     '& .MuiInput-underline:after': {
-      borderBottomColor: COLORS.ERROR_COLOR, // Solid underline on focus
+      borderBottomColor: '#FF3037', // Solid underline on focus
     },
     '& svg': {
-      color: COLORS.ERROR_COLOR,
+      color: '#FF3037',
     },
   },
   textFieldDisabled: {
@@ -43,11 +42,11 @@ const useStyles = () => makeStyles({
   },
   textFieldEmpty: {
     '& svg': {
-      color: COLORS.PRIMARY_COLOR_LIGHT,
+      color: '#A7B3BD',
     },
     '& .Mui-focused': {
       '& svg': {
-        color: COLORS.SECONDARY_COLOR,
+        color: '#00B5E2',
       },
     },
   },
@@ -57,7 +56,7 @@ const useStyles = () => makeStyles({
     },
     '& .Mui-focused': {
       '& svg': {
-        color: COLORS.SECONDARY_COLOR,
+        color: '#00B5E2',
       },
     },
   },

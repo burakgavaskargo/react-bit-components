@@ -1,5 +1,4 @@
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import { COLORS } from '../util/constants';
 
 type Props = {
   iconExists: boolean,
@@ -119,9 +118,9 @@ const useStyles = ({
   */
   textButton: {
     backgroundColor: 'white',
-    color: COLORS.SECONDARY_COLOR,
+    color: '#00B5E2',
     '&:hover': {
-      backgroundColor: COLORS.SECONDARY_COLOR_LIGHT,
+      backgroundColor: '#E6F8FC',
     },
     '&:disabled': {
       color: '#91A0AD',
@@ -137,16 +136,16 @@ const useStyles = ({
   */
   outlinedButton: {
     backgroundColor: 'white',
-    borderColor: COLORS.PRIMARY_COLOR,
-    color: COLORS.PRIMARY_COLOR,
+    borderColor: '#303237',
+    color: '#303237',
     '&:hover': {
       backgroundColor: 'white',
-      borderColor: COLORS.SECONDARY_COLOR,
-      color: COLORS.SECONDARY_COLOR,
+      borderColor: '#00B5E2',
+      color: '#00B5E2',
     },
     '&:disabled': {
-      borderColor: COLORS.PRIMARY_COLOR_LIGHT,
-      color: COLORS.PRIMARY_COLOR_LIGHT,
+      borderColor: '#A7B3BD',
+      color: '#A7B3BD',
     },
   },
   // Ripple effect
@@ -158,10 +157,10 @@ const useStyles = ({
     Contained button style
   */
   containedButton: {
-    backgroundColor: COLORS.PRIMARY_COLOR,
+    backgroundColor: '#303237',
     color: 'white',
     '&:hover': {
-      backgroundColor: COLORS.PRIMARY_COLOR,
+      backgroundColor: '#00B5E2',
     },
     '&:disabled': {
       backgroundColor: '#D1D9DE',
