@@ -1,2 +1,2 @@
-import KrgButton from './krg-button.react';
-export default KrgButton;
+import Typeahead from './Typeahead.react';
+export default Typeahead;
